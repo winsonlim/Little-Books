@@ -1,0 +1,10 @@
+PODS:
+  - FlowingMenu (0.3.0)
+
+DEPENDENCIES:
+  - FlowingMenu (~> 0.3.0)
+
+SPEC CHECKSUMS:
+  FlowingMenu: 98c91b2f947878ddd085f55735cc563e1d9bbec2
+
+COCOAPODS: 0.39.0

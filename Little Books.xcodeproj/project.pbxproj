@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1BAFDF4610C6ACCC5A9A3A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E6261DF582C912BEEE6066 /* Pods.framework */; };
+		5E29B2D31C81E8B9005A34DA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E29B2D21C81E8B9005A34DA /* UIColor.swift */; };
+		5E29B2D51C81EFCA005A34DA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E29B2D41C81EFCA005A34DA /* MenuViewController.swift */; };
 		5EC79D621C81D060000D7B05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC79D611C81D060000D7B05 /* AppDelegate.swift */; };
-		5EC79D641C81D060000D7B05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC79D631C81D060000D7B05 /* ViewController.swift */; };
+		5EC79D641C81D060000D7B05 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC79D631C81D060000D7B05 /* RootViewController.swift */; };
 		5EC79D671C81D060000D7B05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC79D651C81D060000D7B05 /* Main.storyboard */; };
 		5EC79D691C81D060000D7B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC79D681C81D060000D7B05 /* Assets.xcassets */; };
 		5EC79D6C1C81D060000D7B05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC79D6A1C81D060000D7B05 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E29B2D21C81E8B9005A34DA /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		5E29B2D41C81EFCA005A34DA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5EC79D5E1C81D060000D7B05 /* Little Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC79D611C81D060000D7B05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5EC79D631C81D060000D7B05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EC79D631C81D060000D7B05 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		5EC79D661C81D060000D7B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EC79D681C81D060000D7B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EC79D6B1C81D060000D7B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EC79D6D1C81D060000D7B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80553BA01B94BFCC355CB955 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E59F783E8CB6221A921043E0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F5E6261DF582C912BEEE6066 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D1BAFDF4610C6ACCC5A9A3A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E29B2D11C81E8B9005A34DA /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				5E29B2D21C81E8B9005A34DA /* UIColor.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		5EC79D551C81D05F000D7B05 = {
 			isa = PBXGroup;
 			children = (
 				5EC79D601C81D060000D7B05 /* Little Books */,
 				5EC79D5F1C81D060000D7B05 /* Products */,
+				BB26124E5160555052318750 /* Pods */,
+				82A423ADECC1EBADEC52CB0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +73,33 @@
 		5EC79D601C81D060000D7B05 /* Little Books */ = {
 			isa = PBXGroup;
 			children = (
+				5E29B2D11C81E8B9005A34DA /* utils */,
 				5EC79D611C81D060000D7B05 /* AppDelegate.swift */,
-				5EC79D631C81D060000D7B05 /* ViewController.swift */,
+				5EC79D631C81D060000D7B05 /* RootViewController.swift */,
+				5E29B2D41C81EFCA005A34DA /* MenuViewController.swift */,
 				5EC79D651C81D060000D7B05 /* Main.storyboard */,
 				5EC79D681C81D060000D7B05 /* Assets.xcassets */,
 				5EC79D6A1C81D060000D7B05 /* LaunchScreen.storyboard */,
 				5EC79D6D1C81D060000D7B05 /* Info.plist */,
 			);
 			path = "Little Books";
+			sourceTree = "<group>";
+		};
+		82A423ADECC1EBADEC52CB0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5E6261DF582C912BEEE6066 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB26124E5160555052318750 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80553BA01B94BFCC355CB955 /* Pods.debug.xcconfig */,
+				E59F783E8CB6221A921043E0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EC79D701C81D060000D7B05 /* Build configuration list for PBXNativeTarget "Little Books" */;
 			buildPhases = (
+				563802F4FA5D86B532E811CD /* Check Pods Manifest.lock */,
 				5EC79D5A1C81D05F000D7B05 /* Sources */,
 				5EC79D5B1C81D05F000D7B05 /* Frameworks */,
 				5EC79D5C1C81D05F000D7B05 /* Resources */,
+				01222F06C7D52020B424BDBB /* Embed Pods Frameworks */,
+				1587D837ED6C8FB750F11671 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +137,7 @@
 				TargetAttributes = {
 					5EC79D5D1C81D05F000D7B05 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 5364AC7HJT;
 					};
 				};
 			};
@@ -130,13 +172,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01222F06C7D52020B424BDBB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1587D837ED6C8FB750F11671 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		563802F4FA5D86B532E811CD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5EC79D5A1C81D05F000D7B05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EC79D641C81D060000D7B05 /* ViewController.swift in Sources */,
+				5EC79D641C81D060000D7B05 /* RootViewController.swift in Sources */,
+				5E29B2D31C81E8B9005A34DA /* UIColor.swift in Sources */,
 				5EC79D621C81D060000D7B05 /* AppDelegate.swift in Sources */,
+				5E29B2D51C81EFCA005A34DA /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,8 +339,10 @@
 		};
 		5EC79D711C81D060000D7B05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80553BA01B94BFCC355CB955 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Winson Lim (LZD42K2BBH)";
 				INFOPLIST_FILE = "Little Books/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tigerspike.Little-Books";
@@ -258,8 +352,10 @@
 		};
 		5EC79D721C81D060000D7B05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E59F783E8CB6221A921043E0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: TigerSpike Pty Ltd";
 				INFOPLIST_FILE = "Little Books/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tigerspike.Little-Books";
@@ -286,6 +382,7 @@
 				5EC79D721C81D060000D7B05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

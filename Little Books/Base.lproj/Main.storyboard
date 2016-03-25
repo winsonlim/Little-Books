@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" customModule="Little_Books" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,97 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ma6-aa-VVz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="PnQ-DH-W0g">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="UOZ-eh-ymg">
+                                            <connections>
+                                                <segue destination="cl4-vA-BnM" kind="presentation" identifier="PresentMenuSegue" id="ffa-bQ-A7G"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ma6-aa-VVz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="F84-tQ-G0k"/>
+                            <constraint firstItem="Ma6-aa-VVz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Sk3-6z-D3d"/>
+                            <constraint firstItem="Ma6-aa-VVz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VFc-Nu-2J5"/>
+                            <constraint firstAttribute="trailing" secondItem="Ma6-aa-VVz" secondAttribute="trailing" id="agH-K2-w3B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ma6-aa-VVz" secondAttribute="trailing" constant="-20" id="hMV-oN-kpj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Sk3-6z-D3d"/>
+                                <exclude reference="hMV-oN-kpj"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="flowingMenuTransitionManager" destination="xcG-i9-W8q" id="ON9-n5-E7u"/>
+                        <outlet property="menuButton" destination="UOZ-eh-ymg" id="rTa-Xw-D2B"/>
+                        <outlet property="naviBar" destination="Ma6-aa-VVz" id="V2c-1x-YSK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="xcG-i9-W8q" customClass="FlowingMenuTransitionManager" customModule="FlowingMenu"/>
             </objects>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="U4T-h1-K3W">
+            <objects>
+                <viewController id="cl4-vA-BnM" userLabel="Menu View Controller" customClass="MenuViewController" customModule="Little_Books" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YG8-PP-tKU"/>
+                        <viewControllerLayoutGuide type="bottom" id="5U7-Ef-bUn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WGG-oI-HD9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOl-dM-hW4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Menu" id="MYG-Gf-Ztf">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="aEQ-Yh-Gug">
+                                            <connections>
+                                                <segue destination="KrV-Kl-Dis" kind="unwind" identifier="DismissMenuSegue" unwindAction="unwindToMainViewController:" id="ceC-cX-POP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="AOl-dM-hW4" firstAttribute="leading" secondItem="WGG-oI-HD9" secondAttribute="leading" id="25v-RF-vyY"/>
+                            <constraint firstItem="AOl-dM-hW4" firstAttribute="leading" secondItem="WGG-oI-HD9" secondAttribute="leading" constant="20" id="7UO-Q8-muL"/>
+                            <constraint firstAttribute="trailing" secondItem="AOl-dM-hW4" secondAttribute="trailing" constant="20" id="7pq-f5-Wiq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AOl-dM-hW4" secondAttribute="trailing" id="hiT-fw-GA9"/>
+                            <constraint firstItem="AOl-dM-hW4" firstAttribute="leading" secondItem="WGG-oI-HD9" secondAttribute="leadingMargin" id="tX9-bf-6s4"/>
+                            <constraint firstAttribute="trailing" secondItem="AOl-dM-hW4" secondAttribute="trailing" id="xqu-rj-gPl"/>
+                            <constraint firstItem="AOl-dM-hW4" firstAttribute="top" secondItem="YG8-PP-tKU" secondAttribute="bottom" id="xwh-5n-n1F"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7UO-Q8-muL"/>
+                                <exclude reference="7pq-f5-Wiq"/>
+                                <exclude reference="hiT-fw-GA9"/>
+                                <exclude reference="tX9-bf-6s4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="navibar" destination="AOl-dM-hW4" id="zff-tU-GqP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YkX-sS-U7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KrV-Kl-Dis" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="1132"/>
         </scene>
     </scenes>
 </document>
