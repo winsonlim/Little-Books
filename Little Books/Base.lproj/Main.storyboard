@@ -227,9 +227,6 @@
                         <color key="backgroundColor" red="0.50196078431372548" green="0.29803921568627451" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add a Kid" id="lI0-6o-Guy">
-                        <barButtonItem key="backBarButtonItem" systemItem="cancel" id="4kv-in-d8m">
-                            <color key="tintColor" red="0.50196078430000002" green="0.29803921570000003" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AEI-MM-pcS">
                             <color key="tintColor" red="0.50196078430000002" green="0.29803921570000003" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -238,31 +235,85 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="cW3-Gg-DCx">
                             <color key="tintColor" red="0.50196078430000002" green="0.29803921570000003" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="savePressed:" destination="Ef9-ue-q9W" id="ahi-yl-l4y"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZZ-aQ-ry1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654" y="1011"/>
+            <point key="canvasLocation" x="1744" y="1011"/>
+        </scene>
+        <!--Books Add View Controller-->
+        <scene sceneID="rBG-kK-NO6">
+            <objects>
+                <viewController id="aDe-aM-fcD" userLabel="Books Add View Controller" customClass="BooksAddViewController" customModule="Little_Books" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7NV-1P-X7a"/>
+                        <viewControllerLayoutGuide type="bottom" id="eTW-Dx-zQu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Usq-De-Fjh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.50196078430000002" green="0.29803921570000003" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add a Book" id="pVt-GG-JiQ" userLabel="Add a Book">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LgQ-1e-fKU">
+                            <color key="tintColor" red="0.50196078430000002" green="0.29803921570000003" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelPressed:" destination="aDe-aM-fcD" id="nUo-dt-Ivj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Zey-7b-hKV">
+                            <color key="tintColor" red="0.50196078430000002" green="0.29803921570000003" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="savePressed:" destination="aDe-aM-fcD" id="ele-1p-K0D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Crx-f2-2Aa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1744" y="1767"/>
         </scene>
         <!--Books View Controller-->
         <scene sceneID="58W-cW-BUK">
             <objects>
                 <viewController id="AsN-CS-1KV" userLabel="Books View Controller" customClass="BooksViewController" customModule="Little_Books" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cgm-Xz-ebV"/>
-                        <viewControllerLayoutGuide type="bottom" id="fw6-sp-Gjr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3e7-Gc-QWJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wKi-yS-h6n">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.50196078431372548" green="0.29803921568627451" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.50196078430000002" green="0.29803921570000003" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.76862745099999996" green="0.6705882353" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.50196078430000002" green="0.29803921570000003" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dJe-ef-K4g" userLabel="Book Cell">
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dJe-ef-K4g" id="A5a-8u-slX">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.76862745099999996" green="0.6705882353" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AsN-CS-1KV" id="Sac-8q-zwY"/>
+                            <outlet property="delegate" destination="AsN-CS-1KV" id="9s0-aw-oMh"/>
+                        </connections>
+                    </tableView>
                     <navigationItem key="navigationItem" title="Books" id="2xr-E1-INi" userLabel="Navi Item">
                         <barButtonItem key="leftBarButtonItem" systemItem="organize" id="WPt-DO-1fx">
                             <color key="tintColor" red="0.50196078430000002" green="0.29803921570000003" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="menuPressed:" destination="AsN-CS-1KV" id="wqf-3D-lD6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="S2r-Bn-Cg4">
+                            <color key="tintColor" red="0.50196078430000002" green="0.29803921570000003" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="aDe-aM-fcD" kind="show" id="fRT-yZ-zhB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -307,6 +358,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9h-a6-J6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="200" y="1011"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="hZA-xB-4j0">
+            <objects>
+                <tableViewController id="o1w-cC-6TH" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="rg2-Ie-2f5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xWC-YD-v9p">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xWC-YD-v9p" id="QbE-Gb-mqy">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="o1w-cC-6TH" id="1fa-fd-sw9"/>
+                            <outlet property="delegate" destination="o1w-cC-6TH" id="0n2-De-kZA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H0Z-Yo-jv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>
