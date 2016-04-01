@@ -7,73 +7,45 @@
 //
 
 import UIKit
-import FlowingMenu
+import ECSlidingViewController
 
-class RootViewController: UIViewController, FlowingMenuDelegate {
+class RootViewController: UIViewController, ECSlidingViewControllerDelegate {
     
-    @IBOutlet var flowingMenuTransitionManager: FlowingMenuTransitionManager!
-    @IBOutlet weak var menuButton: UIBarButtonItem!
-    @IBOutlet weak var naviBar: UINavigationBar!
-    
-    var menu: UIViewController?
-    
+    @IBOutlet weak var naviItem: UINavigationItem!
     let mainColor      = UIColor(hex: 0x804C5F)
-    let derivatedColor = UIColor(hex: 0x794759)
+//    let derivatedColor = UIColor(hex: 0x794759)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Dashboard"
+        
         // Do any additional setup after loading the view, typically from a nib.
-        
-        // Add the pan screen edge gesture to the current view
-        flowingMenuTransitionManager.setInteractivePresentationView(view)
-        
-        // Add the delegate to respond to interactive transition events
-        flowingMenuTransitionManager.delegate = self
-        
-        naviBar.tintColor              = .whiteColor()
-        naviBar.barTintColor           = mainColor
-        naviBar.titleTextAttributes    = [
+        navigationController?.navigationBar.tintColor = .whiteColor()
+        navigationController?.navigationBar.barTintColor = mainColor
+        navigationController?.navigationBar.titleTextAttributes = [
             NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 22)!,
             NSForegroundColorAttributeName: UIColor.whiteColor()]
-        view.backgroundColor          = mainColor
+//        view.backgroundColor = mainColor
+    }
+    
+    @IBAction func menuPressed(sender: AnyObject) {
+        self.slidingViewController().anchorTopViewToRightAnimated(true)
     }
     
     // MARK: - Interacting with Storyboards and Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "PresentMenuSegue" {
-            let vc = segue.destinationViewController
-            vc.transitioningDelegate = flowingMenuTransitionManager
             
-            // Add the left pan gesture to the menu
-            flowingMenuTransitionManager.setInteractiveDismissView(vc.view)
-            
-            // Keep a reference of the current menu
-            menu = vc
         }
     }
     
-    @IBAction func unwindToMainViewController(sender: UIStoryboardSegue) {
-    }
     
     // MARK: - Managing the Status Bar
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
-    }
-    
-    // MARK: - FlowingMenu Delegate Methods
-    
-    func colorOfElasticShapeInFlowingMenu(flowingMenu: FlowingMenuTransitionManager) -> UIColor? {
-        return mainColor
-    }
-    
-    func flowingMenuNeedsPresentMenu(flowingMenu: FlowingMenuTransitionManager) {
-        performSegueWithIdentifier("PresentMenuSegue", sender: self)
-    }
-    
-    func flowingMenuNeedsDismissMenu(flowingMenu: FlowingMenuTransitionManager) {
-        menu?.performSegueWithIdentifier("DismissMenuSegue", sender: self)
     }
     
 }

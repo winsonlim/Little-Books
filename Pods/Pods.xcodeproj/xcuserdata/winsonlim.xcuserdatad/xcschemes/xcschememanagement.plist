@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>FlowingMenu.xcscheme</key>
+		<key>ECSlidingViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>411C672A2FCE579071542AD2FCF7858D</key>
+		<key>7B7A2469017988195783ED501F467F0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6012E5BD00F813DFDA770631746D441A</key>
+		<key>C3AAC7026505AA67E5E48DC98F926D26</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,6 +1,5 @@
 //
 //  UIColor.swift
-//  FlowingMenuExample
 //
 //  Created by Yannick LORIOT on 03/12/15.
 //  Copyright © 2015 Yannick LORIOT. All rights reserved.

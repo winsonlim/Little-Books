@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0D1BAFDF4610C6ACCC5A9A3A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E6261DF582C912BEEE6066 /* Pods.framework */; };
+		5E0180301CAEE9AF00317997 /* KidsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E01802F1CAEE9AF00317997 /* KidsAddViewController.swift */; };
 		5E29B2D31C81E8B9005A34DA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E29B2D21C81E8B9005A34DA /* UIColor.swift */; };
 		5E29B2D51C81EFCA005A34DA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E29B2D41C81EFCA005A34DA /* MenuViewController.swift */; };
+		5E89CB3F1CA5280B00C9B29C /* KidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E89CB3E1CA5280B00C9B29C /* KidsViewController.swift */; };
+		5E89CB411CA53CBC00C9B29C /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E89CB401CA53CBC00C9B29C /* BooksViewController.swift */; };
 		5EC79D621C81D060000D7B05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC79D611C81D060000D7B05 /* AppDelegate.swift */; };
 		5EC79D641C81D060000D7B05 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC79D631C81D060000D7B05 /* RootViewController.swift */; };
 		5EC79D671C81D060000D7B05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC79D651C81D060000D7B05 /* Main.storyboard */; };
@@ -18,8 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E01802F1CAEE9AF00317997 /* KidsAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsAddViewController.swift; sourceTree = "<group>"; };
 		5E29B2D21C81E8B9005A34DA /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		5E29B2D41C81EFCA005A34DA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		5E89CB3E1CA5280B00C9B29C /* KidsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsViewController.swift; sourceTree = "<group>"; };
+		5E89CB401CA53CBC00C9B29C /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		5EC79D5E1C81D060000D7B05 /* Little Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC79D611C81D060000D7B05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EC79D631C81D060000D7B05 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +83,9 @@
 				5EC79D611C81D060000D7B05 /* AppDelegate.swift */,
 				5EC79D631C81D060000D7B05 /* RootViewController.swift */,
 				5E29B2D41C81EFCA005A34DA /* MenuViewController.swift */,
+				5E89CB3E1CA5280B00C9B29C /* KidsViewController.swift */,
+				5E01802F1CAEE9AF00317997 /* KidsAddViewController.swift */,
+				5E89CB401CA53CBC00C9B29C /* BooksViewController.swift */,
 				5EC79D651C81D060000D7B05 /* Main.storyboard */,
 				5EC79D681C81D060000D7B05 /* Assets.xcassets */,
 				5EC79D6A1C81D060000D7B05 /* LaunchScreen.storyboard */,
@@ -226,9 +235,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EC79D641C81D060000D7B05 /* RootViewController.swift in Sources */,
+				5E89CB3F1CA5280B00C9B29C /* KidsViewController.swift in Sources */,
 				5E29B2D31C81E8B9005A34DA /* UIColor.swift in Sources */,
 				5EC79D621C81D060000D7B05 /* AppDelegate.swift in Sources */,
 				5E29B2D51C81EFCA005A34DA /* MenuViewController.swift in Sources */,
+				5E0180301CAEE9AF00317997 /* KidsAddViewController.swift in Sources */,
+				5E89CB411CA53CBC00C9B29C /* BooksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
