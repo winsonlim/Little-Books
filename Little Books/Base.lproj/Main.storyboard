@@ -232,6 +232,9 @@
                         </barButtonItem>
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AEI-MM-pcS">
                             <color key="tintColor" red="0.50196078430000002" green="0.29803921570000003" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelPressed:" destination="Ef9-ue-q9W" id="kAa-aa-BVe"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="cW3-Gg-DCx">
                             <color key="tintColor" red="0.50196078430000002" green="0.29803921570000003" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
